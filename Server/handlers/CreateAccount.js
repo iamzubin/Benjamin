@@ -16,23 +16,27 @@ const owner1Signer = new ethers.Wallet(
 // dotenv.config()
 
 const create = async (owner) => {
-  const safeAccountConfig = {
-    owners: [owner],
-    threshold: 1,
-  };
-  const ethAdapterOwner1 = new EthersAdapter({
-    ethers,
-    signerOrProvider: owner1Signer,
-  });
-  const safeFactory = await SafeFactory.create({
-    ethAdapter: ethAdapterOwner1,
-  });
-  const safeSdkOwner1 = await safeFactory.deploySafe({ safeAccountConfig });
-  const safeAddress = await safeSdkOwner1.getAddress();
-  await addUser(owner, safeAddress);
-  return safeAddress;
-};
+  try {
 
+    const safeAccountConfig = {
+      owners: [owner],
+      threshold: 1,
+    };
+    const ethAdapterOwner1 = new EthersAdapter({
+      ethers,
+      signerOrProvider: owner1Signer,
+    });
+    const safeFactory = await SafeFactory.create({
+      ethAdapter: ethAdapterOwner1,
+    });
+    const safeSdkOwner1 = await safeFactory.deploySafe({ safeAccountConfig });
+    const safeAddress = await safeSdkOwner1.getAddress();
+    await addUser(owner, safeAddress);
+    return safeAddress;
+  } catch (err) {
+    console.log(err);
+  };
+}
 exports.createAccount = (req, res) => {
   create(req.query.userAddress)
     .then((safeAddress) => {

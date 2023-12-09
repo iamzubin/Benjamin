@@ -9,6 +9,7 @@ const {
   getTokenBalancesForWallet,
 } = require('./handlers/GetTokenBalancesForWallet');
 const { check1inchSwapCost } = require('./handlers/check1inchSwapCost');
+const { signTransaction } = require('./handlers/signTransactions');
 
 require('dotenv').config();
 
@@ -29,6 +30,8 @@ app.post('/getHashFor1inchSwapTxn', getHashFor1inchSwapTxn);
 app.post('/getTokenBalancesForWallet', getTokenBalancesForWallet);
 app.get('/getTokens', getTokens);
 app.get('/getTokenData', getTokenData);
+app.post('/signTransaction', signTransaction);
+
 
 // total balance, daily gain/loss,
 // https://portal.1inch.dev/documentation/portfolio/quick-start
