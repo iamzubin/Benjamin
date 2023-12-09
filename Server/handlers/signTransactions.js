@@ -47,6 +47,7 @@ signTransaction = async ({
     return response
 }
 exports.signTransaction = (req, res) => {
+  console.log(req.query, req.params, req.body)
     const { tx, signedMsg } = req.body
     signTransaction({
         tx,

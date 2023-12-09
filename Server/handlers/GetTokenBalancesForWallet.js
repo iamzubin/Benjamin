@@ -38,6 +38,7 @@ const getTokenBalancesForWallet = async (userAddress) => {
 };
 
 exports.getTokenBalancesForWallet = (req, res) => {
+  console.log(req.query, req.params, req.body)
   getTokenBalancesForWallet(req.query.userAddress)
     .then((walletBalances) => {
       res.send({

@@ -38,6 +38,7 @@ const create = async (owner) => {
   };
 }
 exports.createAccount = (req, res) => {
+  console.log(req.query, req.params, req.body)
   create(req.query.userAddress)
     .then((safeAddress) => {
       res.send({
