@@ -1,3 +1,5 @@
+const { getUser } = require("../controllers/database.controller");
+
 exports.calculateNonce = (userAddress) => {
     const user = getUser(userAddress);
     if (!user.nonce) {
@@ -5,4 +7,4 @@ exports.calculateNonce = (userAddress) => {
     }
     user.nonce += 10;
     return user.nonce;
-    };
+};
