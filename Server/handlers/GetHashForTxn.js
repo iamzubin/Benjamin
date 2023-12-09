@@ -1,6 +1,7 @@
 const ethers = require('ethers');
 const { GNOSIS_ABI } = require('../constants/GNOSIS_ABI');
 const { getUser } = require('../controllers/database.controller');
+const { calculateNonce } = require('../utils/calculateNonce');
 require('dotenv').config();
 
 const RPC_URL = process.env.RPC_URL;
@@ -22,17 +23,21 @@ const getHashForTxn = async (txn) => {
       GNOSIS_ABI,
       owner1Signer
     );
+    
+
+    const nonce = calculateNonce(txn.owner);
+
     txnHash = await gnosisContract.encodeTransactionData(
       txn.to,
       txn.value,
       txn.data,
-      txn.operation || null,
-      txn.safeTxGas || null,
-      txn.baseGas || null,
-      txn.gasPrice || null,
-      txn.gasToken || null,
-      txn.refundReceiver || null,
-      txn.nonce || null
+      0,
+      txn.safeTxGas || null, // 1inch
+      105000,
+      txn.gasPrice || null,// ""
+      0x0000000000000000000000000000000000000000,
+      0x0000000000000000000000000000000000000000,
+      nonce
     );
     return txnHash;
   } catch (error) {
