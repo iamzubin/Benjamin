@@ -12,7 +12,7 @@ struct SessionView: View {
     
     var body: some View {
         if session.loggedIn {
-            Button(action: {session.logout()}, label: {Text("Logout")})
+            Tab()
         } else {
             Onboarding()
         }

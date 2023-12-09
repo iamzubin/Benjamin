@@ -85,7 +85,6 @@ struct FirstView: View {
 }
 
 
-
 struct SecondView: View {
     
     @State private var cancellables: Set<AnyCancellable> = []

@@ -17,6 +17,14 @@
 		EA016CF72B243B48008AE6AB /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA016CF62B243B48008AE6AB /* SessionModel.swift */; };
 		EA016CF92B243F6E008AE6AB /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA016CF82B243F6E008AE6AB /* SessionView.swift */; };
 		EA016CFB2B244003008AE6AB /* Web3Auth.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA016CFA2B244003008AE6AB /* Web3Auth.plist */; };
+		EA99520D2B24536300620026 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA99520C2B24536200620026 /* Tab.swift */; };
+		EA99520F2B24536F00620026 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA99520E2B24536F00620026 /* ModelData.swift */; };
+		EA9952112B24539600620026 /* Investment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9952102B24539600620026 /* Investment.swift */; };
+		EA9952172B2453C000620026 /* AssetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9952132B2453C000620026 /* AssetDetailView.swift */; };
+		EA9952182B2453C000620026 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9952142B2453C000620026 /* ChartView.swift */; };
+		EA9952192B2453C000620026 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9952152B2453C000620026 /* HomeView.swift */; };
+		EA99521A2B2453C000620026 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9952162B2453C000620026 /* LineChartView.swift */; };
+		EA99521C2B245A2800620026 /* InvestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA99521B2B245A2800620026 /* InvestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,14 @@
 		EA016CF62B243B48008AE6AB /* SessionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		EA016CF82B243F6E008AE6AB /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
 		EA016CFA2B244003008AE6AB /* Web3Auth.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Web3Auth.plist; sourceTree = "<group>"; };
+		EA99520C2B24536200620026 /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		EA99520E2B24536F00620026 /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		EA9952102B24539600620026 /* Investment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Investment.swift; sourceTree = "<group>"; };
+		EA9952132B2453C000620026 /* AssetDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetDetailView.swift; sourceTree = "<group>"; };
+		EA9952142B2453C000620026 /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		EA9952152B2453C000620026 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EA9952162B2453C000620026 /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		EA99521B2B245A2800620026 /* InvestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +79,12 @@
 		EA016CDE2B23BA8E008AE6AB /* Benjamin */ = {
 			isa = PBXGroup;
 			children = (
+				EA9952122B2453A100620026 /* Models */,
 				EA016CF52B243B08008AE6AB /* ViewModel */,
 				EA016CF42B243948008AE6AB /* Views */,
 				EA016CDF2B23BA8E008AE6AB /* BenjaminApp.swift */,
 				EA016CE12B23BA8E008AE6AB /* ContentView.swift */,
+				EA99520C2B24536200620026 /* Tab.swift */,
 				EA016CF82B243F6E008AE6AB /* SessionView.swift */,
 				EA016CE32B23BA90008AE6AB /* Assets.xcassets */,
 				EA016CFA2B244003008AE6AB /* Web3Auth.plist */,
@@ -87,7 +105,12 @@
 		EA016CF42B243948008AE6AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA9952132B2453C000620026 /* AssetDetailView.swift */,
+				EA9952142B2453C000620026 /* ChartView.swift */,
+				EA9952152B2453C000620026 /* HomeView.swift */,
+				EA9952162B2453C000620026 /* LineChartView.swift */,
 				EA016CEF2B2438A4008AE6AB /* Onboarding.swift */,
+				EA99521B2B245A2800620026 /* InvestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -95,9 +118,18 @@
 		EA016CF52B243B08008AE6AB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EA99520E2B24536F00620026 /* ModelData.swift */,
 				EA016CF62B243B48008AE6AB /* SessionModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA9952122B2453A100620026 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA9952102B24539600620026 /* Investment.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,11 +210,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9952112B24539600620026 /* Investment.swift in Sources */,
+				EA9952182B2453C000620026 /* ChartView.swift in Sources */,
 				EA016CF02B2438A4008AE6AB /* Onboarding.swift in Sources */,
+				EA99520D2B24536300620026 /* Tab.swift in Sources */,
 				EA016CF92B243F6E008AE6AB /* SessionView.swift in Sources */,
+				EA9952172B2453C000620026 /* AssetDetailView.swift in Sources */,
 				EA016CE22B23BA8E008AE6AB /* ContentView.swift in Sources */,
+				EA99521C2B245A2800620026 /* InvestView.swift in Sources */,
+				EA99521A2B2453C000620026 /* LineChartView.swift in Sources */,
 				EA016CF72B243B48008AE6AB /* SessionModel.swift in Sources */,
+				EA9952192B2453C000620026 /* HomeView.swift in Sources */,
 				EA016CE02B23BA8E008AE6AB /* BenjaminApp.swift in Sources */,
+				EA99520F2B24536F00620026 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
