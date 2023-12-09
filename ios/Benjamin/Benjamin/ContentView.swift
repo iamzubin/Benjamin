@@ -11,7 +11,7 @@ struct ContentView: View {
     @StateObject var session = SessionModel()
     
     var body: some View {
-        Onboarding()
+        SessionView()
             .environmentObject(session)
     }
 }

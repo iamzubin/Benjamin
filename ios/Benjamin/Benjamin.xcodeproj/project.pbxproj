@@ -15,6 +15,8 @@
 		EA016CF02B2438A4008AE6AB /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA016CEF2B2438A4008AE6AB /* Onboarding.swift */; };
 		EA016CF32B243921008AE6AB /* Web3Auth in Frameworks */ = {isa = PBXBuildFile; productRef = EA016CF22B243921008AE6AB /* Web3Auth */; };
 		EA016CF72B243B48008AE6AB /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA016CF62B243B48008AE6AB /* SessionModel.swift */; };
+		EA016CF92B243F6E008AE6AB /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA016CF82B243F6E008AE6AB /* SessionView.swift */; };
+		EA016CFB2B244003008AE6AB /* Web3Auth.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA016CFA2B244003008AE6AB /* Web3Auth.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		EA016CED2B24383A008AE6AB /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		EA016CEF2B2438A4008AE6AB /* Onboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		EA016CF62B243B48008AE6AB /* SessionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
+		EA016CF82B243F6E008AE6AB /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		EA016CFA2B244003008AE6AB /* Web3Auth.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Web3Auth.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +67,9 @@
 				EA016CF42B243948008AE6AB /* Views */,
 				EA016CDF2B23BA8E008AE6AB /* BenjaminApp.swift */,
 				EA016CE12B23BA8E008AE6AB /* ContentView.swift */,
+				EA016CF82B243F6E008AE6AB /* SessionView.swift */,
 				EA016CE32B23BA90008AE6AB /* Assets.xcassets */,
+				EA016CFA2B244003008AE6AB /* Web3Auth.plist */,
 				EA016CED2B24383A008AE6AB /* Launch Screen.storyboard */,
 				EA016CE52B23BA90008AE6AB /* Preview Content */,
 			);
@@ -161,6 +167,7 @@
 				EA016CEE2B24383B008AE6AB /* Launch Screen.storyboard in Resources */,
 				EA016CE72B23BA90008AE6AB /* Preview Assets.xcassets in Resources */,
 				EA016CE42B23BA90008AE6AB /* Assets.xcassets in Resources */,
+				EA016CFB2B244003008AE6AB /* Web3Auth.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA016CF02B2438A4008AE6AB /* Onboarding.swift in Sources */,
+				EA016CF92B243F6E008AE6AB /* SessionView.swift in Sources */,
 				EA016CE22B23BA8E008AE6AB /* ContentView.swift in Sources */,
 				EA016CF72B243B48008AE6AB /* SessionModel.swift in Sources */,
 				EA016CE02B23BA8E008AE6AB /* BenjaminApp.swift in Sources */,
@@ -321,7 +329,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.beauth.Benjamin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beauth.benjamin1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -350,7 +358,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.beauth.Benjamin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beauth.benjamin1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
