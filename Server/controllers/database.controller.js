@@ -27,3 +27,11 @@ exports.addUser = async (owner, safeAddress) => {
     safeAddress: safeAddress,
   });
 };
+
+
+exports.getUser = async (owner) => {
+  const accounts = client.db('benjamin').collection('accounts');
+  const query = { owner: owner };
+  const user = await accounts.findOne(query);
+  return user;
+}
