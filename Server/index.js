@@ -2,6 +2,7 @@ const express = require('express');
 const { createAccount } = require('./handlers/CreateAccount');
 const { getHashForTxn } = require('./handlers/GetHashForTxn');
 const { getTokens } = require('./handlers/GetTokens');
+const { getTokenData } = require('./handlers/GetTokenData');
 const { home } = require('./handlers/Home');
 const {
   getTokenBalancesForWallet,
@@ -21,6 +22,7 @@ app.post('/createAccount', createAccount);
 app.post('/getHashForTxn', getHashForTxn);
 app.post('/getTokenBalancesForWallet', getTokenBalancesForWallet);
 app.get('/getTokens', getTokens);
+app.get('/getTokenData', getTokenData);
 
 // total balance, daily gain/loss,
 // https://portal.1inch.dev/documentation/portfolio/quick-start

@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@covalenthq/client-sdk": "^0.6.7",
     "@safe-global/api-kit": "^2.0.0",
     "@safe-global/protocol-kit": "^2.0.0",
     "@safe-global/safe-core-sdk-types": "^3.0.1",
