@@ -1,12 +1,14 @@
 const express = require('express');
 const { createAccount } = require('./handlers/CreateAccount');
-const { getHashForTxn } = require('./handlers/GetHashForTxn');
+
+const { getHashFor1inchSwapTxn } = require('./handlers/getHashFor1inchSwapTxn');
 const { getTokens } = require('./handlers/GetTokens');
 const { getTokenData } = require('./handlers/GetTokenData');
 const { home } = require('./handlers/Home');
 const {
   getTokenBalancesForWallet,
 } = require('./handlers/GetTokenBalancesForWallet');
+const { check1inchSwapCost } = require('./handlers/check1inchSwapCost');
 
 require('dotenv').config();
 
@@ -18,8 +20,12 @@ app.use((req, res, next) => {
 });
 
 app.get('/', home);
+
+app.use(express.json())
+
 app.post('/createAccount', createAccount);
-app.post('/getHashForTxn', getHashForTxn);
+app.post('/check1inchSwapCost', check1inchSwapCost);
+app.post('/getHashFor1inchSwapTxn', getHashFor1inchSwapTxn);
 app.post('/getTokenBalancesForWallet', getTokenBalancesForWallet);
 app.get('/getTokens', getTokens);
 app.get('/getTokenData', getTokenData);
