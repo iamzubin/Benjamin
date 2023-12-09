@@ -1,6 +1,6 @@
 const express = require('express');
 const { createAccount } = require('./handlers/CreateAccount');
-const { getHashForTxn: getHashFor1inchSwapTxn } = require('./handlers/getHashFor1inchSwapTxn');
+const { getHashFor1inchSwapTxn } = require('./handlers/getHashFor1inchSwapTxn');
 const { home } = require('./handlers/Home');
 const {
   getTokenBalancesForWallet,

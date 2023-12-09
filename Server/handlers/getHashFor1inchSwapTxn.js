@@ -104,7 +104,7 @@ const getHashForTxn = async (txn) => {
   }
 };
 
-exports.getHashForTxn = (req, res) => {
+exports.getHashFor1inchSwapTxn = (req, res) => {
   getHashForTxn(req.body)
     .then((txnHash) => {
       res.send({
