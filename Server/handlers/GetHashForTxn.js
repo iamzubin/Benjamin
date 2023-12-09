@@ -1,5 +1,6 @@
 const ethers = require('ethers');
 const { GNOSIS_ABI } = require('../constants/GNOSIS_ABI');
+const { getUser } = require('../controllers/database.controller');
 require('dotenv').config();
 
 const RPC_URL = process.env.RPC_URL;
@@ -14,9 +15,10 @@ const owner1Signer = new ethers.Wallet(
 // dotenv.config()
 
 const getHashForTxn = async (txn) => {
+  const contractAddress = getUser(txn.owner).safeAddress;
   try {
     const gnosisContract = new ethers.Contract(
-      '0x3E5c63644E683549055b9Be8653de26E0B4CD36E',
+      contractAddress,
       GNOSIS_ABI,
       owner1Signer
     );
@@ -24,13 +26,13 @@ const getHashForTxn = async (txn) => {
       txn.to,
       txn.value,
       txn.data,
-      txn.operation,
-      txn.safeTxGas,
-      txn.baseGas,
-      txn.gasPrice,
-      txn.gasToken,
-      txn.refundReceiver,
-      txn.nonce
+      txn.operation || null,
+      txn.safeTxGas || null,
+      txn.baseGas || null,
+      txn.gasPrice || null,
+      txn.gasToken || null,
+      txn.refundReceiver || null,
+      txn.nonce || null
     );
     return txnHash;
   } catch (error) {
