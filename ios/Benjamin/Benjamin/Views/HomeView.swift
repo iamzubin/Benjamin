@@ -27,6 +27,7 @@ struct HomeView: View {
                             NavigationLink(destination: AssetDetailView()) {
                                 InvestmentRow(investment: investment)
                             }
+                            .buttonStyle(PlainButtonStyle())
                         }
                     }
                 }
