@@ -1,8 +1,8 @@
 const express = require('express');
 const { createAccount } = require('./handlers/CreateAccount');
-const { home } = require('./handlers/home');
-require('dotenv').config()
-
+const { getHashForTxn } = require('./handlers/GetHashForTxn');
+const { home } = require('./handlers/Home');
+require('dotenv').config();
 
 const app = express();
 
@@ -12,8 +12,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', home);
-app.post('/createAccount', createAccount)
-
-
+app.post('/createAccount', createAccount);
+app.post('/getHashForTxn', getHashForTxn);
 
 app.listen(3000, () => console.log('Example app is listening on port 3000.'));
