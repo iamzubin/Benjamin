@@ -45,14 +45,14 @@ struct TopMarketCapView: View {
             
             ZStack {
                 RoundedRectangle(cornerRadius: 25)
-                    .fill(.secondary.opacity(0.1))
+                    .fill(.secondary.opacity(0.2))
                 
                 LazyVGrid(columns: columns, spacing: 20) {
                    ForEach(data, id: \.self) { item in
                        VStack {
                            Image("bitcoin")
                                .resizable()
-                               .frame(width: 55, height: 55)
+                               .frame(width: 45, height: 45)
                            
                            Text("BTC")
                                .padding(.top, 2)
@@ -68,6 +68,7 @@ struct TopMarketCapView: View {
                 .padding()
             }
             .padding(.horizontal)
+            .padding(.vertical, 5)
         }
     }
     

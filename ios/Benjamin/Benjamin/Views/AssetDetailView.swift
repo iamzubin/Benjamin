@@ -28,10 +28,66 @@ struct DetailsView: View {
             if selectedOption == 0 {
                 Overview()
             } else {
-                Text("Txn")
+                TransactionsView()
+
             }
         }
         .padding()
+    }
+}
+
+struct TransactionsView: View {
+    var body: some View {
+        VStack {
+            HStack {
+                Text("2 Dec")
+                    .font(.subheadline)
+                
+                Spacer()
+            }
+            .padding()
+            
+            ForEach(0...2, id: \.self) { i in
+                ZStack {
+                    RoundedRectangle(cornerRadius: 15)
+                        .foregroundColor(.secondary.opacity(0.15))
+                    
+                    HStack {
+                        Image("bitcoin")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                        
+                        
+                        VStack(alignment: .leading) {
+                            Text("Buy BTC")
+                                .foregroundStyle(Color("ourBlack"))
+                                .font(.system(size: 16))
+                            
+                            Text("0.052612 tokens $12.2")
+                                .foregroundStyle(.gray)
+                                .font(.footnote)
+
+                            
+                            Text("11:21 am")
+                                .foregroundStyle(.gray)
+                                .font(.footnote)
+
+                        }
+                        
+                        Spacer()
+                        
+                        VStack {
+                            Text("-$100.00")
+                            
+                            Spacer()
+                        }
+                    }
+                    .padding()
+                    
+                    
+                }
+            }
+        }
     }
 }
 

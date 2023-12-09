@@ -132,7 +132,6 @@ struct SecondView: View {
                                     Image("google_logo")
                                         .resizable()
                                         .frame(width: 27, height: 27)
-                                        .saturation(0)
                                     
                                     Text("Continue with Google")
                                         .foregroundStyle(Color("ourBlack"))
@@ -141,7 +140,7 @@ struct SecondView: View {
                                 .padding()
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 50)
-                                        .stroke(.gray, lineWidth: 2)
+                                        .stroke(.white, lineWidth: 2)
                                         .frame(width: 300)
                                 )
                                 .padding(.bottom)
