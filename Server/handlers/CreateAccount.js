@@ -46,8 +46,9 @@ exports.createAccount = (req, res) => {
     })
     .catch((err) => {
       console.log(err);
-      res.send(() => {
-        Error: 'something went wrong!';
+      res.status(400).send({
+        message: err.message || 'Some error occurred while creating the Safe.',
+        wallet :req.query.userAddress
       });
     });
 };

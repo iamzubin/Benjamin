@@ -55,11 +55,7 @@ const getTrxnData = async (params) => {
     }
 
     const tokenBalances = await response.json();
-    for (let key in tokenBalances) {
-      if (tokenBalances[key] === '0') {
-        delete tokenBalances[key];
-      }
-    }
+
     return tokenBalances;
   } catch (error) {
     console.error(error);
@@ -98,7 +94,7 @@ const getHashForTxn = async (txn) => {
 
   console.log('txnHash : ', txnHash);
 
-  return txnHash;
+  return {txnHash : txnHash, nonce : nonce, _1inchData : _1inchData};
   } catch (error) {
     throw 'something went wrong! ' + error;
   }
