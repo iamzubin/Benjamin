@@ -11,6 +11,7 @@
 		EA016CE22B23BA8E008AE6AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA016CE12B23BA8E008AE6AB /* ContentView.swift */; };
 		EA016CE42B23BA90008AE6AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA016CE32B23BA90008AE6AB /* Assets.xcassets */; };
 		EA016CE72B23BA90008AE6AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA016CE62B23BA90008AE6AB /* Preview Assets.xcassets */; };
+		EA016CEE2B24383B008AE6AB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA016CED2B24383A008AE6AB /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		EA016CE12B23BA8E008AE6AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA016CE32B23BA90008AE6AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA016CE62B23BA90008AE6AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA016CED2B24383A008AE6AB /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 				EA016CDF2B23BA8E008AE6AB /* BenjaminApp.swift */,
 				EA016CE12B23BA8E008AE6AB /* ContentView.swift */,
 				EA016CE32B23BA90008AE6AB /* Assets.xcassets */,
+				EA016CED2B24383A008AE6AB /* Launch Screen.storyboard */,
 				EA016CE52B23BA90008AE6AB /* Preview Content */,
 			);
 			path = Benjamin;
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA016CEE2B24383B008AE6AB /* Launch Screen.storyboard in Resources */,
 				EA016CE72B23BA90008AE6AB /* Preview Assets.xcassets in Resources */,
 				EA016CE42B23BA90008AE6AB /* Assets.xcassets in Resources */,
 			);
