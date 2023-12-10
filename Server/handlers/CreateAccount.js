@@ -18,6 +18,11 @@ const owner1Signer = new ethers.Wallet(
 const create = async (owner) => {
   try {
 
+    // check if the account already exist`
+    const user = await getUser(owner);
+    if (user) {
+      return user.safeAddress;
+    }
     const safeAccountConfig = {
       owners: [owner],
       threshold: 1,
