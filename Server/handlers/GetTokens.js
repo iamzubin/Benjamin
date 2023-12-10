@@ -43,7 +43,7 @@ exports.getTokens = (req, res) => {
     })
     .catch((err) => {
       console.log(err);
-      res.send(() => {
+      res.status(400).send(() => {
         Error: 'something went wrong!';
       });
     });

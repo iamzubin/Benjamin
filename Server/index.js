@@ -10,6 +10,7 @@ const {
 } = require('./handlers/GetTokenBalancesForWallet');
 const { check1inchSwapCost } = require('./handlers/check1inchSwapCost');
 const { signTransaction } = require('./handlers/signTransactions');
+const { getUser } = require('./controllers/database.controller');
 
 require('dotenv').config();
 
@@ -31,6 +32,15 @@ app.post('/getTokenBalancesForWallet', getTokenBalancesForWallet);
 app.get('/getTokens', getTokens);
 app.get('/getTokenData', getTokenData);
 app.post('/signTransaction', signTransaction);
+app.post('/getAddress', (req, res) => {
+  console.log(req.query, req.params, req.body)
+  getUser(req.query.userAddress).then((user) => {
+    console.log(user)
+    res.send({
+      user: user,
+    });
+  })
+});
 
 
 // total balance, daily gain/loss,

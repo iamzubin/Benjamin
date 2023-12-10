@@ -30,9 +30,11 @@ exports.addUser = async (owner, safeAddress) => {
 
 
 exports.getUser = async (owner) => {
+  console.log('owner', owner)
   const accounts = client.db('benjamin').collection('accounts');
   const query = { owner: owner };
   const user = await accounts.findOne(query);
+  console.log(user)
   return user;
 }
 
